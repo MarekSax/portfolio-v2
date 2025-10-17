@@ -1,13 +1,10 @@
-// src/lib/contentful.ts
 import { createClient } from 'contentful';
 
 import type { LOCALE_CODE } from '@/types/contentful';
 
-// import { env } from '../../next.config';
-
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID as string,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
 });
 
 type Project = {
